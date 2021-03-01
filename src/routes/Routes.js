@@ -1,4 +1,4 @@
-
+import {addNewFeedback} from '../controllers/controller'
 
 const routes = (app) => {
     app.route('/certificates')
@@ -6,7 +6,7 @@ const routes = (app) => {
 
 
     app.route('/feedback')
-        .post((req, res) => res.send('You have received some feedback'));
+        .post(addNewFeedback);
 }
 
 export default routes;
