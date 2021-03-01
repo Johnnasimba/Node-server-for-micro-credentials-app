@@ -1,8 +1,10 @@
-import {addNewFeedback} from '../controllers/controller'
+import {
+    getCertificates,
+    addNewFeedback} from '../controllers/controller'
 
 const routes = (app) => {
     app.route('/certificates')
-        .get((req, res) => res.send('All certificates acquired successfully'));
+        .get(getCertificates);
 
 
     app.route('/feedback')
